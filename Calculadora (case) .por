@@ -4,13 +4,13 @@ programa {
     real a,b,op
 
     escreva ("--------------------\n")
-		escreva ("      OperaÁıes     \n")
+		escreva ("      Opera√ß√µes     \n")
     escreva ("Soma               1\n")
-    escreva ("SubtraÁ„o          2\n")
-    escreva ("MultiplicaÁ„o      3\n")
-    escreva ("Divis„o            4\n")             
+    escreva ("Subtra√ß√£o          2\n")
+    escreva ("Multiplica√ß√£o      3\n")
+    escreva ("Divis√£o            4\n")             
 		escreva ("--------------------\n")
-    escreva("Qual operaÁ„o deseja fazer: \n")
+    escreva("Qual opera√ß√£o deseja fazer: \n")
     leia(op)
     escreva ("Informe o primeiro valor:")
     leia(a)
@@ -20,23 +20,26 @@ programa {
     
     escolha(op){
       caso 1: 
-        escreva("A soma È: ",a+b"\n")
+        escreva("A soma √©: ",a+b"\n")
         pare
 
       caso 2: 
-       escreva("A SubtraÁ„o È: ",a-b"\n")
+       escreva("A Subtra√ß√£o √©: ",a-b"\n")
         pare
 
       caso 3: 
-        escreva("A MultiplicaÁ„o È: ",a*b"\n")
+        escreva("A Multiplica√ß√£o √©: ",a*b"\n")
         pare
 
       caso 4: 
         se(b<>0){
-           escreva("A Divis„o È: ",a/b)
+           escreva("A Divis√£o √©: ",a/b)
         }
         senao{
-          escreva ("N„o È possivel dividir por 0")
+          escreva ("N√£o √© possivel dividir por 0")
+        }
+        caso contrario:{
+          escreva("op√ß√£o invalida")
         }
     }
   }
