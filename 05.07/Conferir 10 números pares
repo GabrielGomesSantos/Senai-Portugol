@@ -1,0 +1,16 @@
+programa {
+  funcao inicio() {
+    limpa()
+
+    inteiro n , pares = 0 , count=0, a = 0
+
+    enquanto(count < 10){
+
+    leia(n)
+    se (n%2==0){
+      pares++
+    }
+    count++
+  }
+  escreva("Você escreveu ",pares," números pares.")
+}
