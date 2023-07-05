@@ -1,0 +1,28 @@
+programa {
+  funcao inicio() {
+  inteiro primos=0,impar=0,pares=0,n,count=0,i=0
+    
+    enquanto(i<10){
+      leia(n)
+      i++
+      count=0
+      para (inteiro div = 0; div <= n; div++){
+      se(n%div==0){
+        count++
+      }
+      }
+      se(count==2){
+      primos++
+      }
+      se(n%2==0){
+        pares++
+      }
+      senao{
+        impar++
+      }
+    }
+     
+    
+    escreva("Pares: ",pares,"\nImpares: ",impar,"\nPrimos: ",primos) 
+  }
+}
