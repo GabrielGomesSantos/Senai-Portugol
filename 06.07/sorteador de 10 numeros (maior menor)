@@ -1,0 +1,17 @@
+programa{
+	inclua biblioteca Util --> u
+	funcao inicio(){
+    inteiro maior = -1, menor = 101, valor
+		para(inteiro i = 0; i <=5; i++){
+			valor = u.sorteia(0 , 100)
+      escreva(valor," ")
+      se (valor > maior){
+        maior = valor  
+      }
+      se (valor < menor){
+        menor = valor 
+      }
+		}
+  escreva("\nMaior Número: ",maior,"\nMenor Número: ",menor)  
+	}
+}
