@@ -1,0 +1,48 @@
+/ * 
+ * Este arquivo de código fonte é livre para utilização, cópia e/ou modificação
+ * desde que este cabeçalho, contendo os direitos autorais e a descrição do programa, 
+ * seja mantido.
+ * 
+ * Descrição:
+ * 
+ * 	Este programa foi criado com intuito academico de exemplificar um carinho de compras, 
+ * 	em que aparece o catalogo com 4 produtos de disponibilidade para o cliente que deve escolher 
+ *	um dos 4 códigos de produto 
+ *
+ *	Ex 1) (L.17, 23) 
+ * 	 
+ *	--------------------------------------------
+ *	Código Descrição Preço
+ *	1 Pendrive 32GB R$49.90
+ *	2 Teclado USB R$24.90
+ *	3 Cartucho HP1220 R$68.90
+ *	4 Mouse Bluetooth R$119.90
+ *	--------------------------------------------
+ * 	Digite o código do produto:
+ * 		
+ * 		
+ * 	Após a escolha do produto o cliente devera informar a quantidade do produto que deseja(L.39,40)
+ *	logo em seguida o programa mostra uma tela indicando a quantidade e o produto adicionados ao carrinho, 
+ * 	e o que o cliente deseja fazer em seguida 
+ *		(1) Adicionar outro produto 
+ *		(2) Ver o carrinho  
+ *
+ *	--------------------------------------------
+ *	Você adicionou ao carrinho:
+ *	10 unidades do produto Teclado USB
+ *	O que deseja fazer?
+ *	--------------------------------------------	
+ * 	(1) Adicionar outro produto
+ *	(2) Ver o carrinho de compras
+ *
+ *	caso opção 1 seja selecionada o cliente voltara a primeira tela pergntando qual produto ele deseja adicionar 
+ *	caso opção 2 seja selecionada o programa limpa a tela e mostrara o carrinho de compras do cliente  
+ * 	
+ * 
+ * 	Gabriel Gomes dos Santos
+ * 	João Lucca Gomes Silvestre 
+ *      Naian Ferreira da Silva Gomes 
+ *      Marcelo Inácio Rocha Alves 
+ * 	
+ * 	Data: 12/07/2023
+ */
