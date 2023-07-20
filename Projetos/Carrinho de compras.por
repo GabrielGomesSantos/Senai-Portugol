@@ -92,6 +92,7 @@ programa {
           escreva("Digite a quantidade do produto: "                    )
           leia(qnt)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(qnt<1){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -120,6 +121,7 @@ programa {
           escreva("(2) Ver o carrinho de compras\n"                     )
           leia(op2)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(op2<1 ou op2>2){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -150,6 +152,7 @@ programa {
           escreva("Digite a quantidade do produto: "                    )
           leia(qnt)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(qnt<1){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -178,6 +181,7 @@ programa {
           escreva("(2) Ver o carrinho de compras\n"                     )
           leia(op2)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(op2<1 ou op2>2){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -208,6 +212,7 @@ programa {
           escreva("Digite a quantidade do produto: "                    )
           leia(qnt)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(qnt<1){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -236,6 +241,7 @@ programa {
           escreva("(2) Ver o carrinho de compras\n"                     )
           leia(op2)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(op2<1 ou op2>2){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -266,6 +272,7 @@ programa {
           escreva("Digite a quantidade do produto: "                     )
           leia(qnt)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(qnt<1){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -294,6 +301,7 @@ programa {
           escreva("(2) Ver o carrinho de compras\n"                     )
           leia(op2)
 
+          //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
           enquanto(op2<1 ou op2>2){
           limpa()
           escreva("--------------------------------------------------\n")
@@ -361,25 +369,48 @@ programa {
       se(i==verdadeiro){
         leia(op3)
       }
-      
+
+      //=-=-enquanto a opção for invalida o programa pede para escolher novamente-=-=\\
       enquanto(op3<1 ou op3>3){
-        leia(op3)
-        escreva("O que deseja fazer?\n"                        )
-        escreva("-------------------------------------------\n")
-        escreva("\n"                                           )
-        escreva("(1) Adicionar outro produto\n"                )
-        escreva("(2) Limpar carrinho de compras\n"             )
-        escreva("(3) Sair\n"                                   )
+      limpa()
+      escreva("-------------------------------------------\n"  )
+      escreva("Seu carrinho de compras\n"                      )
+      escreva("\nDescrição                        Quantidade\n")
+
+      se(q1>0){
+        escreva(c1,"                        ",q1"\n"           )
+      }
+
+      se(q2>0){
+        escreva("\n",c2,"                          ",q2"\n"    )
+      }  
+
+      se(q3>0){
+        escreva("\n",c3,"                      ",q3"\n"        )
+      }
+
+      se(q4>0){
+        escreva("\n",c4,"                      ",q4"\n"        )
+      }
+
+      escreva("\n\nValor total do carrinho           R$",valor,"\n")
+      escreva("-------------------------------------------\n"      )
+      escreva("O que deseja fazer?\n"                              )
+      escreva("-------------------------------------------\n"      )
+      escreva("(1) Adicionar outro produto\n"                      )
+      escreva("(2) Limpar carrinho de compras\n"                   )
+      escreva("(3) Sair\n"                                         )
+      leia(op3)
       }
 
       escolha(op3){
 
-        caso 1:
+        caso 1: //=-=-Volta pro inicio para escolher outro produto-=-=\\
 
           i =  falso 
         pare
 
-        caso 2:
+        caso 2: //=-=-Limpa o carrinho-=-=\\
 
           op3 = 0
           q1 = 0
@@ -391,7 +422,7 @@ programa {
           
         pare
 
-        caso 3:
+        caso 3: //=-=-Encerra o programa-=-=\\
 
         limpa()
         i = verdadeiro
