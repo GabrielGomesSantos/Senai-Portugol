@@ -1,0 +1,47 @@
+  programa{
+	inclua biblioteca Util --> u
+	funcao inicio(){
+    inteiro valor[10], count = 0
+    logico primo = verdadeiro
+    inteiro nota
+		para(inteiro i = 0; i <5; i++){
+			valor[i] = u.sorteia(0 , 20)
+		}
+
+    escreva("Cresente: ")
+    para(inteiro k = 0; k <=4; k++){
+      escreva(valor[k]," ")
+    }
+
+  //   escreva("\nDecresente: ")
+  //   para(inteiro j = 9; j >=0; j--){
+  //     escreva(valor[j]," ")
+  //   }
+
+  //   escreva("\nPares: ")
+
+  //  para(inteiro j = 0; j <=9; j++){
+  //     se(valor[j]%2== 0){
+  //       escreva(valor[j]," ")
+  //     }
+  //   }
+  //       escreva("\nImpares: ")
+  //     para(inteiro p = 0; p <=9; p++){
+  //     se(valor[p]%2!= 0){
+  //       escreva(valor[p]," ")
+  //     }
+      escreva("\n")
+
+
+      para(inteiro i = 0; i <=4; i++){
+      nota = valor[i]
+      primo = verdadeiro
+        para (inteiro j = 2; j<nota; j++){
+          se(nota%j == 0){
+          primo = falso
+          pare
+        }
+      }
+      se(primo)escreva(" * ") senao escreva(nota, " ")
+	}        
+}    
