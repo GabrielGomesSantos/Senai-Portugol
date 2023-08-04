@@ -1,0 +1,200 @@
+programa{
+  inclua biblioteca Util --> u
+  inclua biblioteca Matematica --> mat
+  funcao inicio(){
+    
+    //=-=-=-=Variaveis-=-=-=-=\\
+      real total = 0
+      real votos[5] = {0, 0, 0, 0, 0}
+      real percent[5] = {0, 0, 0, 0, 0,}
+      cadeia nomes [5] 
+      inteiro a 
+      
+    //=-=-=-=Inicio-=-=-=-=\\
+      
+      escreva("Digite o nome do Primeiro candidado: ") 
+      leia(nomes[0])
+      limpa()
+
+      escreva("Digite o nome do Segundo candidado: ") 
+      leia(nomes[1])
+      limpa()
+
+      escreva("Digite o nome do Terceiro candidado: ") 
+      leia(nomes[2])
+      limpa()
+
+      escreva("Digite o nome do Quarto candidado: ") 
+      leia(nomes[3])
+      limpa()
+
+      escreva("Digite o nome do Quinto candidado: ") 
+      leia(nomes[4])
+      limpa()
+
+        escreva("Criando Votação aguarde...\n")
+        u.aguarde(300)
+        escreva("● · ·")
+
+        u.aguarde(300)
+        limpa()
+        escreva("Criando Votação aguarde...\n")
+        escreva("• ● ·")
+        
+        u.aguarde(300)
+        limpa()
+        escreva("Criando Votação aguarde...\n")
+        escreva("· • ●")
+
+        u.aguarde(300)
+        limpa()
+        escreva("Criando Votação aguarde...\n")
+        escreva("● · •")
+
+        u.aguarde(300)
+        limpa()
+        escreva("Criando Votação aguarde...\n")
+        escreva("• ● ·")
+
+        u.aguarde(300)
+        limpa()
+        escreva("Criando Votação aguarde...\n")
+        escreva("· • ●")
+        u.aguarde(300)
+        
+    //=-=-=-Limpa-=-=-=\\
+
+    limpa()
+
+    //=-=-=-=Lopp para votação-=-=-=\\ 
+    
+    faca{
+
+    limpa()
+
+    escreva("-----Lista Do Candidatos-----\n")
+    escreva("1) ",nomes[0],              "\n")
+    escreva("2) ",nomes[1],              "\n")
+    escreva("3) ",nomes[2],              "\n")
+    escreva("4) ",nomes[3],              "\n")
+    escreva("5) ",nomes[4],              "\n")
+    escreva("----------------------------\n" )
+    escreva("Qual o seu voto?: \n"         )
+    escreva("----------------------------\n" )
+
+      leia(a)
+
+      escolha (a) {
+
+      caso 0 
+      escreva("Programa Encerrado!!")
+      u.aguarde(2000)
+      limpa()
+      pare
+
+
+      pare
+
+      caso 1
+        limpa()
+        votos[0] = votos[0]+1
+        total = votos[0]+votos[1]+votos[2]+votos[3]+votos[4]
+
+        escreva("-----Lista Do Candidatos-----\n")
+        escreva("1) ",nomes[0],": ",votos[0]," votos, ",mat.arredondar(votos[0]*100/total, 2),"%\n")
+        escreva("2) ",nomes[1],": ",votos[1]," votos, ",mat.arredondar(votos[1]*100/total, 2),"%\n")
+        escreva("3) ",nomes[2],": ",votos[2]," votos, ",mat.arredondar(votos[2]*100/total, 2),"%\n")
+        escreva("4) ",nomes[3],": ",votos[3]," votos, ",mat.arredondar(votos[3]*100/total, 2),"%\n")
+        escreva("5) ",nomes[4],": ",votos[4]," votos, ",mat.arredondar(votos[4]*100/total, 2),"%\n")
+        escreva("----------------------------\n" )
+        u.aguarde(3000)
+        limpa()
+        
+      pare 
+
+
+      caso 2
+        limpa()
+        votos[1] = votos[1]+1
+        total = votos[0]+votos[1]+votos[2]+votos[3]+votos[4]
+
+        escreva("-----Lista Do Candidatos-----\n")
+        escreva("1) ",nomes[0],": ",votos[0]," votos, ",mat.arredondar(votos[0]*100/total, 2),"%\n")
+        escreva("2) ",nomes[1],": ",votos[1]," votos, ",mat.arredondar(votos[1]*100/total, 2),"%\n")
+        escreva("3) ",nomes[2],": ",votos[2]," votos, ",mat.arredondar(votos[2]*100/total, 2),"%\n")
+        escreva("4) ",nomes[3],": ",votos[3]," votos, ",mat.arredondar(votos[3]*100/total, 2),"%\n")
+        escreva("5) ",nomes[4],": ",votos[4]," votos, ",mat.arredondar(votos[4]*100/total, 2),"%\n")
+        escreva("----------------------------\n" )
+        u.aguarde(3000)
+        limpa()
+        
+
+      pare
+
+
+      caso 3
+        limpa()
+        votos[2] = votos[2]+1
+        total = votos[0]+votos[1]+votos[2]+votos[3]+votos[4]
+
+        escreva("-----Lista Do Candidatos-----\n")
+        escreva("1) ",nomes[0],": ",votos[0]," votos, ",mat.arredondar(votos[0]*100/total, 2),"%\n")
+        escreva("2) ",nomes[1],": ",votos[1]," votos, ",mat.arredondar(votos[1]*100/total, 2),"%\n")
+        escreva("3) ",nomes[2],": ",votos[2]," votos, ",mat.arredondar(votos[2]*100/total, 2),"%\n")
+        escreva("4) ",nomes[3],": ",votos[3]," votos, ",mat.arredondar(votos[3]*100/total, 2),"%\n")
+        escreva("5) ",nomes[4],": ",votos[4]," votos, ",mat.arredondar(votos[4]*100/total, 2),"%\n")
+        escreva("----------------------------\n" )
+        u.aguarde(3000)
+        limpa()
+        
+
+      pare
+
+      caso 4
+        limpa()
+        votos[3] = votos[3]+1
+        total = votos[0]+votos[1]+votos[2]+votos[3]+votos[4]
+
+        escreva("-----Lista Do Candidatos-----\n")
+        escreva("1) ",nomes[0],": ",votos[0]," votos, ",mat.arredondar(votos[0]*100/total, 2),"%\n")
+        escreva("2) ",nomes[1],": ",votos[1]," votos, ",mat.arredondar(votos[1]*100/total, 2),"%\n")
+        escreva("3) ",nomes[2],": ",votos[2]," votos, ",mat.arredondar(votos[2]*100/total, 2),"%\n")
+        escreva("4) ",nomes[3],": ",votos[3]," votos, ",mat.arredondar(votos[3]*100/total, 2),"%\n")
+        escreva("5) ",nomes[4],": ",votos[4]," votos, ",mat.arredondar(votos[4]*100/total, 2),"%\n")
+        escreva("----------------------------\n" )
+        u.aguarde(3000)
+        limpa()
+        
+
+      pare
+
+      caso 5
+        limpa()
+        votos[4] = votos[4]+1
+        total = votos[0]+votos[1]+votos[2]+votos[3]+votos[4]
+
+        escreva("-----Lista Do Candidatos-----\n")
+        escreva("1) ",nomes[0],": ",votos[0]," votos, ",mat.arredondar(votos[0]*100/total, 2),"%\n")
+        escreva("2) ",nomes[1],": ",votos[1]," votos, ",mat.arredondar(votos[1]*100/total, 2),"%\n")
+        escreva("3) ",nomes[2],": ",votos[2]," votos, ",mat.arredondar(votos[2]*100/total, 2),"%\n")
+        escreva("4) ",nomes[3],": ",votos[3]," votos, ",mat.arredondar(votos[3]*100/total, 2),"%\n")
+        escreva("5) ",nomes[4],": ",votos[4]," votos, ",mat.arredondar(votos[4]*100/total, 2),"%\n")
+        escreva("----------------------------\n" )
+        u.aguarde(3000)
+        limpa()
+        
+      pare      
+
+      caso contrario
+      escreva("Número invalido")
+      u.aguarde(2000)
+      limpa()
+      pare
+
+      }
+    }enquanto(a!=0)
+
+    }
+  }
+  }
+}
