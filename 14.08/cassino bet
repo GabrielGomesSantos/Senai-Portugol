@@ -1,0 +1,169 @@
+programa {
+  inclua biblioteca Util --> u
+  funcao inicio() {
+  inteiro palpite [5] 
+  inteiro ganhador
+  inteiro golsA, golsB, totalgols
+  inteiro saldo = 100
+  cadeia timeA = "Flamengo", timeB = "Vasco"
+  real vp,vqg,vv,ve, total = 0
+    //=-=-=Informações para apostar 
+
+    golsA = 5
+    golsB = 2
+    totalgols = golsA + golsB
+
+      se(golsA == golsB){
+        ganhador = 3
+      }
+      senao se(golsA > golsB){
+        ganhador = 1
+      }
+      senao{
+        ganhador = 2
+      }
+
+    //=-=-=Texto para Aposta=-=-=
+
+      escreva("Jogo do ",timeA," X ",timeB)
+      escreva("\nQual seu palpite para a quantidade de gols do primeiro time: ")
+      leia(palpite[0])
+      limpa()
+      escreva("Jogo do ",timeA," X ",timeB)
+      escreva("\nQual seu palpite para a quantidade de gols do segundo time: ")
+      leia(palpite[1])
+      limpa()
+      escreva("Seu palpite para o placar foi de: ",palpite[0]," X ",palpite[1],"\n")
+
+      u.aguarde(500)
+      limpa()
+
+
+    //=-=-=Controle De apostas=-=-= obs: valor negativos arrumar....
+
+    escreva("Saldo: ",saldo,"\n")
+    escreva("Quanto você deseja apostar no palpite de quem vai vencer?")
+    leia(vv)
+    limpa()
+    enquanto(vv<0 ou vv > saldo){
+      limpa()
+      escreva("saldo: ",saldo)
+      escreva("\nvalor invalido,Quanto você deseja apostar no palpite de quem vai vencer?")
+      leia(vv)
+    }
+    saldo = saldo - vv
+    limpa()
+
+    escreva("Saldo: ",saldo)
+    escreva("\nQuanto você quer apostar no palpite do placar?")
+    leia(vp)
+    enquanto(vp<0 ou vp > saldo){
+      limpa()
+      escreva("saldo: ",saldo)
+      escreva("\nvalor invalido,Quanto você deseja apostar no placar?")
+      leia(vp)
+    }
+    saldo = saldo - vp
+    limpa()
+
+    escreva("Saldo: ",saldo)
+    escreva("\nQuanto você quer apostar no palpite do empate?")
+    leia(ve)
+    enquanto(ve<0 ou ve > saldo){
+      limpa()
+      escreva("saldo: ",saldo)
+      escreva("\nvalor invalido,Quanto você deseja apostar no empate?")
+      leia(ve)
+    }
+    saldo = saldo - ve 
+    limpa()
+
+    escreva("Saldo: ",saldo)
+    escreva("\nQuanto você quer apostar no palpite da quantidade de gols?")
+    leia(vqg)
+    enquanto(vqg<0 ou vqg > saldo){
+      limpa()
+      escreva("saldo: ",saldo)
+      escreva("\nvalor invalido,Quanto você deseja apostar na quantidade de gols?")
+      leia(vqg)
+    }
+    saldo = saldo -vqg
+    limpa()
+
+    //=-=-=Controle de fluxo Qnts de gols palpite[2]
+
+      palpite[2] = palpite[0] + palpite[1]
+
+    //=-=-=Controle de fluxo quem venceu palpite[3]
+
+      se(palpite[0] == palpite[1]){ 
+        palpite[3] = 3
+      }
+      se(palpite[0] > palpite[1]){
+        palpite[3] = 1
+      }
+      se(palpite[0] < palpite[1]){
+         palpite[3] = 2
+      }
+
+    //=-=-=Calculos de Ganhos 
+      limpa()
+
+      se(ganhador == palpite[3]){
+        
+        se(ganhador == 3){
+          escreva("Voce acertou o empate\n")
+          ve = ve * 7 
+        }
+        senao{
+          escreva("Voce acertou quem ganhou\n")
+          vv = vv * 5
+        }
+      }
+      senao{
+        escreva("Voce erreou quem ganhou!!")
+        ve = 0 
+        vqg = 0 
+      }
+        
+      se(palpite[2] == totalgols){
+        escreva("acertou total de gols\n")
+        vqg = vqg * 3
+      }
+      senao{
+        escreva("Errou total de gols\n")
+        vqg = 0
+      }
+
+      se(palpite[0] == golsA e palpite[1] == golsB){
+        escreva("acertou placar\n")
+        vp = vp * 10 
+      }
+      senao{
+        escreva("Errou placar\n")
+        vp = 0
+      }
+
+    //=-=-=Output Resultados=-=-=
+
+    total = vp + ve + vqg + vv 
+
+    escreva("Atualizando seu saldo")
+    u.aguarde(1000)
+    limpa()
+    escreva("Seu novo total de lucro é: ",total-100)
+    escreva("\nseu saldo atual é: ",saldo+total)
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+}
