@@ -1,0 +1,66 @@
+programa {
+  funcao inicio() {
+    inteiro gols[5][2]
+    cadeia jogos[5][4]
+    inteiro maior
+
+  //=-=-=Inserir times e gols=-=-=
+
+      para(inteiro i=0; i<3; i++){
+        escreva("Digite o nome do time da casa: ")
+        leia(jogos[i][0])
+        escreva("Digite o numero de gols do time da casa: ")
+        leia(gols[i][0])
+        enquanto(gols[i][0]< 0){
+          limpa()
+          escreva("Digite o numero de gols do time da casa: ")
+          leia(gols[i][0])
+        }
+        limpa()
+        escreva("Digite o nome do time da casa: ")
+        leia(jogos[i][1])
+        escreva("Digite o numero de gols do time da casa: ")
+        leia(gols[i][1])
+        enquanto(gols[i][1]< 0){
+          limpa()
+          escreva("Digite o numero de gols do time da casa: ")
+          leia(gols[i][1])
+        }
+        limpa()
+      }
+
+  //=-=-=Decicoes ganhadores=-=-=
+
+        para(inteiro p = 0; p<5; p++){
+          se(gols[p][0] == gols[p][1]){
+            jogos[p][2] = "empate"
+          }
+          senao se(gols[p][0] > gols[p][1]){
+            jogos[p][2] = jogos[p][0]
+            jogos[p][3] = "1"
+          }
+          senao{
+            jogos[p][2] = jogos[p][1]
+            jogos[p][3] = "1"
+          }
+        }
+
+  //decisao bom e ruim
+
+      para(inteiro top = 0; top > 5; top++){
+        maior = jogos[top][1]
+        se(jogos[top][2]>jogos[top+1][2]){
+          bom = jogos[top][2]
+        }
+      }  
+
+  //=-=-=Output=-=-=-        
+
+        para(inteiro j=0; j<5; j++){
+          escreva(jogos[j][0]," ",gols[j][0]," x ",gols[j][1]," ",jogos[j][1]," --> ",jogos[j][2],"\n")
+        }
+        escreva("Melhor Time: ",bom,"\nPior time: ",ruim)
+
+      }   
+  }
+}
